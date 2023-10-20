@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --light-gary: hsl(0, 0%, 95%);
+    --link-purple: hsl(228, 45%, 44%);
+
+    --fm-LD: font-family: 'Lexend Deca', sans-serif;
+    --fm-BSD: font-family: 'Big Shoulders Display', cursive;
+
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+html, body {
+    height: 100vh;
+    background-color: var(--light-gary);
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 5%;
+    padding-top: 18px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--link-purple);
+}
+
+.card-container {
+    height: 500px;
+}
+
+.card-container .container-fluid,
+.card-container .row {
+    height: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-container .card-body:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: var(--bright-orange);
+}
+
+.card-container .card-body:nth-child(2) {
+    background-color: var(--dark-cyan);
+}
+
+.card-container .card-body:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--very-dark-cyan);
+}
+
+.card-heading {
+    color: var(--light-gary);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5rem;
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+}
+
+.card-description {
+    color: var(--transparent-white);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.9rem;
+    font-weight: var(--fw-400);
+}
+
+.btn-learn-more {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 145px;
+    min-height: 48px;
+    border: 2px solid var(--light-gary);
+    border-radius: 50px;
+    background-color: var(--light-gary);
+    text-decoration: none;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.9rem;
+    overflow-wrap: break-word;
+    font-weight: var(--fw-400);
+    text-align:center;
+    user-select: none;
+    -webkit-transition: .3s;
+            transition: .3s;
+}
+
+.card-container .card-body:first-child .btn-learn-more {
+    color: var(--bright-orange);
+}
+
+.card-container .card-body:nth-child(2) .btn-learn-more {
+    color: var(--dark-cyan);
+}
+
+.card-container .card-body:last-child .btn-learn-more {
+    color: var(--very-dark-cyan);
+}
+
+.btn-learn-more:hover {
+    color: var(--light-gary) !important;
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 677px) {
+
+    main {
+        height: auto;
+        display: block;
+        padding: 3rem 1rem;
+    }
+
+    .card-container {
+        height: auto;
+    }
+
+    .card-container .card-body:first-child {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .card-container .card-body:last-child {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 1%;
+        left: 0;
+        padding-top: 18px;
+        width: 100%;
+        font-size: 11px;
+        text-align: center;
+    }
+}
