@@ -1,7 +1,18 @@
+@font-face {
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/LexendDeca-Regular.woff2') format('woff2');
+    font-display: swap;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
-
+@font-face {
+    font-family: 'Big Shoulders Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/BigShouldersDisplay-Bold.woff2') format('woff2');
+    font-display: swap;
+}
 *, *::before, *::after {
     box-sizing: border-box;
 }
